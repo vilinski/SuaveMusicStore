@@ -1,0 +1,8 @@
+source https://nuget.org/api/v2
+framework >= net451
+nuget FSharp.Core 3.1.2.1
+nuget FsPickler 1.0.7
+nuget Npgsql 2.2.5
+nuget SQLProvider 0.0.9-alpha
+nuget Suave 0.28.1
+nuget Suave.Experimental 0.28.1

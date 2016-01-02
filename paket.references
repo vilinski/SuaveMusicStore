@@ -1,0 +1,6 @@
+FSharp.Core
+FsPickler
+Npgsql
+SQLProvider
+Suave
+Suave.Experimental
