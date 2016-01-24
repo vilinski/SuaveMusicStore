@@ -17,14 +17,14 @@ let getContext() = ()
 let firstOrNone s = s |> Seq.tryFind (fun _ -> true)
 
 let read toFunc sql =
-  use connection = new NpgsqlConnection("Server=127.0.0.1;User Id=suave; Password=1234;Database=SuaveMusicStore;")
+  use connection = new NpgsqlConnection("Server=172.17.0.2;User Id=suave; Password=1234;Database=suavemusicstore;")
   connection.Open()
   use command = new NpgsqlCommand(sql, connection)
   use reader = command.ExecuteReader()
   toFunc reader
 
 let nonQuery sql =
-  use connection = new NpgsqlConnection("Server=127.0.0.1;User Id=suave; Password=1234;Database=SuaveMusicStore;")
+  use connection = new NpgsqlConnection("Server=172.17.0.2;User Id=suave; Password=1234;Database=suavemusicstore;")
   connection.Open()
   use command = new NpgsqlCommand(sql, connection)
   command.ExecuteNonQuery() |> ignore
